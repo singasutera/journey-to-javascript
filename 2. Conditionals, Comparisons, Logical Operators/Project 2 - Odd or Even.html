@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even Project</title>
+</head>
+<body>
+    <h1>Odd or Even Project</h1>
+    <p>This is an Odd or Even project. We will check if a number is odd or even.</p>
+    <p>The number can only be between 1-100.</p>
+
+    <script>
+        var number = 9;
+
+        document.write("The number is " + number + ". <br>");
+        document.write("Feel free to change this number in the script. <br><br>")
+
+        if(!isNaN(number) && number >= 1 && number <= 100){
+            if(number % 2 == 0){
+                document.write("The number is even! <br>");
+            }
+            else{
+                document.write("The number is odd! <br>");
+            }
+        }
+        else{
+            document.write("The number is not between 1-100! <br>");
+        }
+    </script>
+</body>
+</html>
