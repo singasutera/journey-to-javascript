@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals, Comparisons, Logical Operators</title>
+</head>
+<body>
+    <h1> Conditionals with Comparison Operators </h1>
+
+    <h3> Scroll down for the results! </h3>
+
+    <h2> 1. IF String (1) </h2>
+    <p> Hardcoded name = "Koding Next" <br> </p>
+    <p> If name is "Koding Next", write "Hello, Koding Next!" <br> </p>
+    <p> If name is not "Koding", write "Your name is not Koding only." <br><br> </p>
+    
+    <h2> 2. IF String (2) </h2>
+    <p> Hardcoded name1 = "Sonora" <br> </p>
+    <p> Hardcoded name2 = "Supernatural" <br> </p>
+    <p> If name2 is greater than name1, write "Supernatural is greater than Sonora." <br><br> </p>
+
+    <h2> 3. IF Integer </h2>
+    <p> Hardcoded number1 = 9 <br> </p>
+    <p> If number1 is equal to 9, write "Number 1 is equal (==) to 9." <br> </p>
+    <p> If number1 is not equal to 10, write "Number 1 is not equal (!=) to 10." <br> </p>
+    <p> If number1 is greater than 8, write "Number 1 is greater (>) than 8." <br> </p>
+    <p> If number1 is less than 10, write "Number 1 is less (<) than 10." <br> </p>
+    <p> If number1 is greater than or equal to 9, write "Number 1 is greater than or equal (>=) to 9." <br> </p>
+    <p> If number1 is less than or equal to 9, write "Number 1 is less than or equal (<=) to 9." <br><br> </p>
+
+    <h2> 4. IF and ELSE </h2>
+    <p> Hardcoded number2 = 3 <br> </p>
+    <p> If number1 is greater than number2, write "Number 1 (9) is greater than Number 2 (3)." <br> </p>
+    <p> Else, write "Number 1 (9) is less than Number 2 (3)." <br><br> </p>
+
+    <h2> 5. IF, ELSE IF, and ELSE </h2>
+    <p> If number1 is greater than number2, write "Number 1 (9) is greater than Number 2 (3)." <br> </p>
+    <p> Else, if number1 is less than number2, write "Number 1 (9) is less than Number 2 (3)." <br> </p>
+    <p> Else, write "Number 1 (9) is equal to Number 2 (3)." <br><br> </p>
+
+    <h2> 6. Double equals (==) vs Triple equals (===) </h2>
+    <p> Hardcoded number3 = 6 <br> </p>
+    <p> Hardcoded string = "6" <br> </p>
+    <p> If number3 is equal to string, write "number3 == string is true" <br> </p>
+    <p> If number3 is of equal type to string, write "number3 === string is true" <br><br> </p>
+
+    <h1> =============RESULTS============= </h1>
+    
+    <script>
+        // 1. IF String Comparison (1)
+        document.write("===   1.   ======================== <br><br>")
+        
+        var name = "Koding Next";
+
+        if(name == "Koding Next"){
+            document.write("Hello, Koding Next! <br><br>");
+        }
+
+        if(name != "Koding"){
+            document.write("Your name is not Koding only. <br><br>");
+        }
+
+        // 2. IF String Comparison (2)
+        document.write("===   2.   ======================== <br><br>")
+        var name1 = "Sonora";
+        var name2 = "Supernatural";
+
+        if (name2 > name1){
+            document.write("Supernatural is greater than Sonora. <br><br>");
+        }
+
+        // 3. IF Integer Comparison
+        document.write("===   3.   ======================== <br><br>")
+        var number1 = 9;
+
+        if (number1 == 9){
+            document.write("Number 1 is equal (==) to 9. <br><br>");
+        }  
+
+        if (number1 != 10){
+            document.write("Number 1 is not equal (!=) to 10. <br><br>");
+        }
+
+        if (number1 > 8){
+            document.write("Number 1 is greater (>) than 8. <br><br>");
+        }
+
+        if (number1 < 10){
+            document.write("Number 1 is less (<) than 10. <br><br>");
+        }
+
+        if (number1 >= 9){
+            document.write("Number 1 is greater than or equal (>=) to 9. <br><br>");
+        }
+
+        if (number1 <= 9){
+            document.write("Number 1 is less than or equal (<=) to 9. <br><br>");
+        }   
+
+        // 4. IF and ELSE
+        document.write("===   4.   ======================== <br><br>")
+        number2 = 3;
+
+        if (number1 > number2) {
+            document.write("Number 1 (" + number1 + ") is greater than Number 2 (" + number2 + "). <br><br>");
+        } else {
+            document.write("Number 1 (" + number1 + ") is less than Number 2 (" + number2 + "). <br><br>");
+        }
+
+        // 5. IF, ELSE IF, and ELSE
+        document.write("===   5.   ======================== <br><br>")
+        if (number1 > number2) {
+            document.write("Number 1 (" + number1 + ") is greater than Number 2 (" + number2 + "). <br><br>");
+        } else if (number1 < number2) {
+            document
+        } else {
+            document.write("Number 1 (" + number1 + ") is equal to Number 2 (" + number2 + "). <br><br>");
+        }
+
+        // 6. Double equals (==) vs Triple equals (===)
+        document.write("===   6.   ======================== <br><br>")
+        
+        var number3 = 6;
+        var string = "6";
+
+        document.write("number3 = " + number3 + "<br>");
+        document.write("string = " + string + "<br><br>");
+
+        document.write("number3 == string is " + (number3 == string) + "<br>");
+        document.write("number3 === string is " + (number3 === string) + "<br><br>");
+
+        // 7. Debugging Challenge >>> In another file
+        // 8. Conditionals Project - Grading System >>> In another file
+
+    </script>
+
+</body>
+</html>
