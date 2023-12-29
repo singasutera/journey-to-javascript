@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators</title>
+</head>
+
+<body>
+    <script>
+    // NOTE: IGNORE THE FUNCTION, IT'S JUST TO MAKE IT EASIER TO NAVIGATE THIS PAGE
+    // CTRL + SHIFT + [ TO FOLD
+    // CTRL + SHIFT + ] TO UNFOLD
+    document.write("<pre>")
+    // ^^^ THIS PART IS TO PREFORMAT THE PAGE ^^^
+
+        document.write("<h1>Logical Operators</h1>")
+        document.write("<p>Logical operators are used to determine the logic between variables or values.</p>")
+        document.write("<p>There are three logical operators in JavaScript: AND (&&), OR (||), and NOT (!).</p>")
+        document.write("<p>Let's take a look at each of them!</p>")
+
+        // 9. AND (&&)
+        function and() {
+            document.write("===   1. AND ======================== <br><br>")
+            document.write("AND operator is like when you want to graduate school, you need to have <b>both</b> your student ID card and your report card. <br>")
+            document.write("If you don't have both, you can't graduate. <br><br>")
+
+            document.write("So let's say your student ID card is the first requirement. We say: <br>")
+            document.write("nbsp;var studentIDCard = true; <br><br>")
+
+            document.write("And your report card is the second requirement. We say: <br>")
+            document.write("          var reportCard = true; <br><br>")
+
+            var studentIDCard = true;
+            var reportCard = true;
+
+            document.write("If you have both, you can graduate. <br>")
+            document.write("          if(studentIDCard && reportCard){ <br>")
+            document.write("              document.write('You can graduate!'); <br>")
+            document.write("          } else { <br>")
+            document.write("              document.write('You can't graduate... Sorry!'); <br>")
+            document.write("          } <br><br>")
+
+            document.write("The result will be: <br>")
+
+            if (studentIDCard && reportCard) {
+                document.write("You can graduate! <br><br>");
+            } else {
+                document.write("You can't graduate... Sorry! <br><br>");
+            }
+
+            document.write("Now let's say you have your student ID card, but you're missing your report card! We say: <br>")
+            document.write("          var studentIDCard = true; <br>")
+            document.write("          var reportCard = false; <br><br>")
+
+            var studentIDCard = true;
+            var reportCard = false;
+
+            document.write("The result will change! <br>")
+
+            if (studentIDCard && reportCard) {
+                document.write("You can graduate! <br><br>");
+            } else {
+                document.write("You can't graduate... Sorry! <br><br>");
+            }
+
+            document.write("The result will be the same if you have your report card, but you're missing your student ID card! <br>")
+            document.write("          var studentIDCard = false; <br>")
+            document.write("          var reportCard = true; <br><br>")
+
+            var studentIDCard = false;
+            var reportCard = true;
+
+            document.write("Take a look! <br>")
+
+            if (studentIDCard && reportCard) {
+                document.write("You can graduate! <br><br>");
+            } else {
+                document.write("You can't graduate... Sorry! <br><br>");
+            }
+
+            document.write("And if you don't have both, well, of course you can't graduate! <br>")
+            document.write("          var studentIDCard = false; <br>")
+            document.write("          var reportCard = false; <br><br>")
+
+            var studentIDCard = false;
+            var reportCard = false;
+
+            document.write("Let's see! <br>")
+
+            if (studentIDCard && reportCard) {
+                document.write("You can graduate! <br><br>");
+            } else {
+                document.write("You can't graduate... Sorry! <br><br>");
+            }
+        }
+
+        // 10. OR (||)
+        function or() {
+            document.write("===   2. OR ======================== <br><br>")
+            document.write("OR operator is like when you want to borrow a book from the library, you only need to have either you library card <b>or</b> your student ID card. <br>")
+            document.write("If you have just one, you can borrow a book. <br><br>")
+            
+            document.write("Same as before, let's say you have your library card AND your student ID card. We say: <br>")
+            document.write("          var libraryCard = true; <br>")
+            document.write("          var studentIDCard = true; <br><br>")
+
+            var libraryCard = true;
+            var studentIDCard = true;
+
+            document.write("If you have both, you can borrow a book. <br>")
+            document.write("          if(libraryCard || studentIDCard){ <br>")
+            document.write("              document.write('You can borrow a book!'); <br>")
+            document.write("          } else { <br>")
+            document.write("              document.write('You can't borrow a book... Sorry!'); <br>")
+
+            document.write("The result will be: <br>")
+            document.write("You can borrow a book! <br><br>")
+
+            document.write("Now let's say you have your library card, but you're missing your student ID card! We say: <br>")
+            document.write("          var libraryCard = true; <br>")
+            document.write("          var studentIDCard = false; <br><br>")
+
+            var libraryCard = true;
+            var studentIDCard = false;
+
+            document.write("Can you guess the result? <br>")
+            if(libraryCard || studentIDCard){
+                document.write("You can borrow a book! <br><br>");
+            } else {
+                document.write("You can't borrow a book... Sorry! <br><br>");
+            }
+
+            document.write("The result will be the same if you have your student ID card, but you're missing your library card! <br>")
+            document.write("          var libraryCard = false; <br>")
+            document.write("          var studentIDCard = true; <br><br>")
+
+            var libraryCard = false;
+            var studentIDCard = true;
+
+            document.write("Take a look! <br>")
+            if(libraryCard || studentIDCard){
+                document.write("You can borrow a book! <br><br>");
+            } else {
+                document.write("You can't borrow a book... Sorry! <br><br>");
+            }
+
+            document.write("And if you don't have both, well, of course you can't borrow a book! <br>")
+            document.write("          var libraryCard = false; <br>")
+            document.write("          var studentIDCard = false; <br><br>")
+
+            var libraryCard = false;
+            var studentIDCard = false;
+
+            document.write("Let's see! <br>")
+            if(libraryCard || studentIDCard){
+                document.write("You can borrow a book! <br><br>");
+            } else {
+                document.write("You can't borrow a book... Sorry! <br><br>");
+            }
+        }
+
+        // 11. NOT (!)
+        function not() {
+            document.write("===   3. NOT ======================== <br><br>")
+            document.write("NOT operator simply checks if the statement is <b>true or not</b>. Simple, right? <br><br>")
+
+            document.write("Let's say we are going to check if a variable is a number or not! <br>")
+            document.write("          var whoami = \"9\"; <br><br>")
+
+            var whoami = "9";
+
+            document.write("If we check it with ! (NOT), the way to read it is: <br>")
+            document.write("          if(!whoami){ <br>")
+            document.write("              document.write('If whoami is NOT TRUE, whoami is a number!'); <br>")
+            document.write("          } else { <br>")
+            document.write("              document.write('If it's TRUE, whoami is not a number...'); <br>")
+            document.write("          } <br><br>")
+            document.write("The result will be: <br>")
+
+            if(!whoami){
+                document.write("If whoami is NOT TRUE, whoami is a number! <br><br>");
+            } else {
+                document.write("If it's TRUE, whoami is not a number... <br><br>");
+            }
+            
+            document.write("There's another way! Let's use isNaN()! <br>")
+            document.write("          if(isNaN(whoami)){ <br>")
+            document.write("              document.write('whoami is a number!'); <br>")
+            document.write("          } else { <br>")
+            document.write("              document.write('whoami is not a number...'); <br>")
+            document.write("          } <br><br>")
+            document.write("The result will be: <br>")
+
+            if(isNaN(whoami)){
+                document.write("whoami is a number! <br><br>");
+            } else {
+                document.write("whoami is not a number... <br><br>");
+            }
+
+        }
+        
+        // 12. Odd or Even Project >>> in another file
+
+        // CALLING THE FUNCTIONS... (IGNORE THIS PART)
+        and();
+        or();
+        not();
+    </script>
+</body>
+
+</html>
