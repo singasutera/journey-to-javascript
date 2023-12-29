@@ -1,0 +1,13 @@
+Next time, just git add .
+You tried committing everything one by one, it doesn't look good.
+Don't worry about it.
+
+Just remember:
+
+cd .\{name_of_folder}
+
+git add .
+git commit -m "Lesson name 09/09/1999"
+git push
+
+Good luck!
