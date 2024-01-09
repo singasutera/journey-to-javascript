@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMG baru no 4 dong...</title>
+    <!-- MALES!!! -->
+</head>
+
+<body>
+    <p id="print1"></p>
+    <p id="print2"></p>
+    <p id="print3"></p>
+    <p id="print4"></p>
+    <p id="print5"></p>
+    <p id="print6"></p>
+
+    <script type="text/javascript">
+        // 1. Loops Example
+        var text = "Loopy loopy ya ya loopy loopy yay";
+        var combined = "";
+
+        for (i = 0; i < 9; i++) {
+            combined += text + "<br>";
+        }
+
+        document.getElementById("print1").innerHTML = combined;
+
+        // 2. No Loop (Wrong way to do it. Let's check!)
+        var text2 = "Buat apa gampang kalau bisa susah?";
+
+        document.getElementById("print2").innerHTML = text2;
+        document.getElementById("print2").innerHTML = text2;
+        document.getElementById("print2").innerHTML = text2;
+        document.getElementById("print2").innerHTML = text2;
+        document.getElementById("print2").innerHTML = text2;
+        document.getElementById("print2").innerHTML = text2;
+
+
+        // 3. Proper No Loop
+        combined = "";
+
+        combined = combined + text2 + "<br>";
+        combined = combined + text2 + "<br>";
+        combined = combined + text2 + "<br>";
+        combined = combined + text2 + "<br>";
+        combined = combined + text2 + "<br>";
+        combined = combined + text2 + "<br>";
+        combined = combined + text2 + "<br>";
+        combined = combined + text2 + "<br>";
+        combined = combined + text2 + "<br>";
+
+        document.getElementById("print3").innerHTML = combined;
+
+        // 4. While Loop
+        text = "Yok wes lah ganti text"
+        combined = "";
+        var i = 0;
+
+        while (i < 9) {
+            combined += text + "<br>";
+            i++;
+        }
+
+        document.getElementById("print4").innerHTML = combined;
+
+        // 5. Do While Loop
+        text = "Ganti maneh gaskeun"
+        combined = "";
+        i = 0;
+
+        do {
+            combined += text + "<br>";
+            i++;
+        } while (i < 9);
+
+        document.getElementById("print5").innerHTML = combined;
+
+        // 6. For Loop (Again?)
+        var number = 9;
+        var calculation = 0;
+        var combined = "";
+
+        for (i = 0; i < 6; i++) {
+            calculation = calculation + number;
+            combined += calculation + "<br>";
+        }
+
+        document.getElementById("print6").innerHTML = combined;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Maker</title>
+</head>
+
+<body>
+    <h1>Triangle Maker</h1>
+    <p>Let's make a triangle!</p>
+    <p>How many rows should we make? <input type="text" id="num"></p>
+    <input type="button" onclick="triangle()" value="Make!">
+    <br>
+    <h2 id="print"></h2>
+
+    <script type="text/javascript">
+        function triangle() {
+            var num = document.getElementById("num").value;
+            var combined = "";
+            var stars = 1;
+
+            for (var i = 1; i <= num; i++) {
+                for (var j = 1; j <= stars; j++) {
+                    combined += "*";
+                }
+                stars++;
+                combined += "<br>";
+            }
+
+            document.getElementById("print").innerHTML = combined;
+        }
+    </script>
+
+</body>
+
+</html>

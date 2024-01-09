@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even - Upgrade!</title>
+</head>
+<body>
+    <h1>Odd or Even 2: Electric Boogaloo</h1>
+    <p>We will check if numbers are odd or even.</p>
+    <p>What number should we stop on? <input type="text" id="num"></p>
+    <input type="button" onclick="oddEven()" value="Check!">
+    <br>
+    <h2 id="print"></h2>
+
+    <script type="text/javascript">
+        function oddEven() {
+            var num = document.getElementById("num").value;
+            var combined = "";
+
+            for (var i=1; i<=num; i++) {
+                if (i % 2 == 0) {
+                    combined += i + " is even <br>";
+                } else {
+                    combined += i + " is odd <br>";
+                }
+            }
+
+            document.getElementById("print").innerHTML = combined;
+        }
+    </script>
+</body>
+</html>

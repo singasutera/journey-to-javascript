@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random!</title>
+</head>
+<body>
+    <p id="print1"></p>
+
+    <script type="text/javascript">
+        var number = Math.floor(Math.random() * 10 + 1);
+        var combined = "";
+
+        for (var i=0; i<number; i++) {
+            combined += "Hi <br>";
+        }
+
+        document.getElementById("print1").innerHTML = combined;
+    </script> 
+</body>
+</html>

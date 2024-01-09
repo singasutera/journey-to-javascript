@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomrino</title>
+</head>
+<body>
+    <h4>This is an example usage of math.random</h4>
+    <p id="print1"></p>
+    <br>
+    <h4>This is an example usage of math.random with math.floor</h4>
+    <p id="print2"></p>
+
+    <script type="text/javascript">
+        // 1. Math.random
+        var random = Math.random() * 10 + 1;
+        document.getElementById("print1").innerHTML = random;
+
+        // 2. Math.random with Math.floor
+        var random2 = Math.floor(Math.random() * 10 + 1);
+        document.getElementById("print2").innerHTML = random2;
+    </script>
+</body>
+</html>
