@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System Upgrade</title>
+</head>
+<body>
+    <h1>Grading System Upgrade</h1>
+    <p>Enter scores below to see your grade.</p>
+    <p>Score 1: <input type="text" id="score1"></p>
+    <p>Score 2: <input type="text" id="score2"></p>
+    <p>Score 3: <input type="text" id="score3"></p>
+    <p><input type="button" onclick="seeResult()" value="See results"></p>
+
+    <p>Average Score: <input type="text" id="average" disabled></p>
+    <p id="grade"></p>
+    <p id="remarks"></p>
+
+    <script>
+        function seeResult() {
+            var score1 = document.getElementById("score1").value;
+            var score2 = document.getElementById("score2").value;
+            var score3 = document.getElementById("score3").value;
+
+            var average = (parseInt(score1) + parseInt(score2) + parseInt(score3)) / 3;
+
+            document.getElementById("average").value = average;
+
+            if (average >= 90) {
+                document.getElementById("grade").innerHTML = "Grade: A";
+                document.getElementById("remarks").innerHTML = "Remarks: Excellent";
+            } else if (average >= 80) {
+                document.getElementById("grade").innerHTML = "Grade: B";
+                document.getElementById("remarks").innerHTML = "Remarks: Very Good";
+            } else if (average >= 70) {
+                document.getElementById("grade").innerHTML = "Grade: C";
+                document.getElementById("remarks").innerHTML = "Remarks: Good";
+            } else if (average >= 60) {
+                document.getElementById("grade").innerHTML = "Grade: D";
+                document.getElementById("remarks").innerHTML = "Remarks: Fair";
+            } else {
+                document.getElementById("grade").innerHTML = "Grade: F";
+                document.getElementById("remarks").innerHTML = "Remarks: Poor";
+            }
+        }
+    </script>
+</body>
+</html>
