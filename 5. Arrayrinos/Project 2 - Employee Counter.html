@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Counter</title>
+</head>
+<body>
+    <h2>Welcome to the Employee Counter project!</h2>
+    <p>Here, you will be able to count the amount of employee types and display it.</p>
+
+    <h3>Below you'll find the list of employee types:</h3>
+    <h3 id="employee"></h3>
+
+    <h3>Below is the number of employees depending on their types:</h3>
+    <h3 id="count"></h3>
+
+    <script type="text/javascript">
+        var employees = [];
+        var numberofteachers = 0;
+        var numberofstudents = 0;
+        var numberofstaffadmin = 0;
+        var text = "";
+        var randomizer = Math.floor(Math.random() * 20 + 1);
+        var randomemployee = 0;
+
+        for (var i = 0; i < randomizer; i++) {
+            randomemployee = Math.floor(Math.random() * 3 + 1);
+
+            if (randomemployee == 1) {
+                employees.push("Teacher");
+                numberofteachers++;
+            } else if (randomemployee == 2) {
+                employees.push("Student");
+                numberofstudents++;
+            } else {
+                employees.push("Staff/Admin");
+                numberofstaffadmin++;
+            }
+        }
+
+        for (var i = 0; i < employees.length; i++) {
+            text = text + (i+1) + ". " + employees[i] + "<br>";
+        }
+
+        document.getElementById("employee").innerHTML = text;
+        document.getElementById("count").innerHTML = "Number of teachers: " + numberofteachers + "<br>" + "Number of students: " + numberofstudents + "<br>" + "Number of staff/admin: " + numberofstaffadmin;
+        document.write("And there are currently " + employees.length + " employees in the company.");
+    </script>
+</body>
+</html>

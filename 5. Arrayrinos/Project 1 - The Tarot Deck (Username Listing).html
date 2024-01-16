@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tarot Deck Project</title>
+</head>
+<body>
+    <h2>Please click the buttons depending on which action you would like to take.</h2>
+    <h3>In this program, you'll be able to see the cards currently residing in your deck.</h3>
+
+    <h2 id="deck"></h2>
+    <input type="text" name="card" id="card">
+    <input type="submit" name="" onclick="addCard()" value="Add Card">
+    <input type="submit" name="" onclick="removeCard()" value="Remove Card">
+    <input type="submit" name="" onclick="showDeck()" value="Show Deck">
+
+    <script type="text/javascript">
+        var deck = ["The Fool", "The Magician", "Justice", "The Moon"];
+
+        function addCard() {
+            var card = document.getElementById("card").value;
+            deck.push(card);
+            document.getElementById("card").value = "";
+            alert("Card added!");
+        }
+
+        function removeCard() {
+            deck.pop();
+            alert("Card removed!");
+        }
+
+        function showDeck() {
+            document.getElementById("deck").innerHTML = deck;
+        }   
+    </script>
+
+</body>
+</html>

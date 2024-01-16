@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapan kelar anying</title>
+</head>
+<body>
+    <!-- 1. Introduction to arrays -->
+    <h2> Array example </h2>
+
+    <script type="text/javascript">
+        // 1. Introduction
+        var cards = ["The Fool", "The Magician", "Justice", "The Moon"];
+        document.write(cards);
+        document.write("<br><br>");
+        document.write(cards[0]);
+        document.write(" is on a journey. Where will she go? What will she find?");
+        document.write("<br><br>");
+
+        var hername = cards[2];
+        console.log("And her name is " + hername + ".");
+
+        // 2. Add and remove items from arrays
+        // 2.1 Add items to the end of an array
+        cards.push("The Sun");
+        document.write(cards);
+        document.write("<br><br>");
+        // 2.2 Remove items from the end of an array
+        cards.pop();
+        document.write(cards);
+        document.write("<br><br>");
+        // 2.3 Remove items from the beginning of an array
+        cards.shift();
+        document.write(cards);
+        document.write("<br><br>");
+
+        // 3. Using Length and Sort
+        document.write("Here is our current deck.");
+        document.write("<br><br>");
+        document.write(cards);
+        document.write("<br><br>");
+        // 3.1 Using length
+        document.write("There are " + cards.length + " cards in the deck.");
+        document.write("<br><br>");
+        // 3.2 Using sort
+        cards.sort();
+        document.write("Here is our deck after sorting.");
+        document.write("<br><br>");
+        document.write(cards);
+        document.write("<br><br>");
+
+        // 4. Project 1: The Tarot Deck (Modified from Username Listing)
+        // In another file.
+
+        // 5. Looping through Arrays
+        // 5.1 For loop
+        var text = "";
+        
+        for (var i=0; i < cards.length; i++) {
+            text = text + (i+1) + ". " + cards[i] + "<br>";
+        }
+
+        document.write(text);
+
+        // 6. Project 2: Employee Counter
+        // In another file.
+
+        // 7. Mini Quiz
+        // Hey Noska the teacher! This is actually for next lesson. I just put it here because it's related to arrays.
+        // The quiz part is basically let them declare their own array and ask them to print the sum of the contents using loops.
+        var numbers = [1, 3, 6, 9, 12, 15];
+        var sum = 0;
+
+        for(var i=0; i < numbers.length; i++) {
+            sum = sum + numbers[i];
+        }
+
+        document.write("<br><br>");
+        document.write("Values of the array: " + numbers + "<br>");
+        document.write("Sum of the values: " + sum);
+
+    </script>
+</body>
+</html>
