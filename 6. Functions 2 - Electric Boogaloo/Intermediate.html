@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm enjoying the process now.</title>
+    <!-- Important note: Content is modified in order to not have prompts pop up all the time. Nobody likes that. -->
+
+    <!-- Note to self: use <span> to add an inline HTML without having to add another <p> -->
+</head>
+<body>
+    <h1>Function 1</h1>
+    <p>Simple function without parameters.</p>
+    <p>Check your console :)</p>
+
+    <h1>Function Review with Trigger</h1>
+    <button onclick="showAlert()">Click me!</button>
+
+    <h1>Function 1 Task</h1>
+    <!-- there isn't supposed to be a button here, but i hate prompts with my guts. -->
+    <button onclick="kimiNoNaWa()">Click me to become part of anime.</button>
+    <p>Your name is? <span id="kimiNoNaWa"></span></p>
+    <!-- added bonus for the weebs -->
+    <p id="bonus"></p>
+    <span id="despacito"></span>
+    <p id="notdespacito"></p>
+
+    <h1>Function 2</h1>
+    <p>Function with parameters.</p>
+    <p>Check console again! :D</p>
+
+    <h1>Function 2 Task</h1>
+    <button onclick="createStars()">Click me to create stars!</button>
+    <p>Your stars: <span id="printedStars"></span></p>
+
+    <h1>Function 3</h1>
+    <p><i>I can't even... I'm odd :D</i></p>
+    <button onclick="theActualFunc()">Click me if you understand the joke.</button>
+    <p>Your inputted number is: <span id="deeznums"></span></p>
+
+    <h1>Function 3 Task</h1>
+    <button onclick="countMultiplicative()">Click me to find the multiplicative!</button>
+    <p>The 9  multiplicative number of your inputted number is: <span id="multiplicative"></span></p>
+    <p>Why nine? Because I like it.</p>
+
+    <h1>Project 1 - Username and Password Checker</h1>
+    <p>Check the other file.</p>
+
+    <h1>Pop Quiz!</h1>
+    <p><b>1. Briefly explain what JavaScript is.</b></p>
+    <p>JavaScript is a programming language that is used to make web pages interactive.</p>
+
+    <br>
+
+    <p><b>2. What methods/property are there to display a message in JavaScript?</b></p>
+    <p><b>innerHTML</b>: it's a property used to access or modify the HTML content within an element. Use the method getElementById().</p>
+    <p><b>alert()</b>: displays a pop-up dialog box with a message to the user. </p>
+    <p><b>document.write()</b>: used to write a string of text to a document stream opened by document.open().</p>
+    <p><b>console.log()</b>: displays data in the console.</p>
+
+    <br>
+
+    <p><b>3. What is a variable? How do you declare and initialize it?</b></p>
+    <p>A variable is a container for storing data values. You can declare and initialize it by using the var keyword.</p>
+    <p>Example: var number = 9;</p>
+
+    <br>
+
+    <p><b>4. What are the data types in JavaScript? Explain each one.</b></p>
+    <p><b>Number</b>: any number, including numbers with decimals: 4, 8, 15, 16, 23, 42, 108. </p>
+    <p>&emsp; There are two types: <b>integer</b> for whole numbers, and <b>float</b> for decimal numbers.</p>
+    <p><b>String</b>: any text inside double or single quotes: "Hello World!"</p>
+    <p><b>Boolean</b>: true or false</p>
+    <p><b>Undefined</b>: a variable that has been declared but not assigned a value</p>
+    <p><b>Null</b>: a variable with no value</p>
+
+    <br>
+
+    <p><b>5. What is a conditional statement? Provide an example.</b></p>
+    <p>A conditional statement is a set of rules performed if a certain condition is met.</p>
+    <p>Example:</p>
+    <p>if (x > 9) {</p>
+    <p>&emsp;document.write("x is greater than 9");</p>
+    <p>}</p>
+
+    <br>
+
+    <p><b>6. What is the output of the code below?</b></p>
+    <p><b>var name = "Indigo Sonora"</b></p>
+    <p><b>var number = 0;</b></p>
+    <p><b>for(var i=0; i&lt;name.length; i++) {</b></p>
+        <p><b>&emsp;num++</b></p>
+    <p><b>}</b></p>
+    <p><b>document.write("The number is: " + number);</b></p>
+    <p>Answer:</p>
+    <p>The number is: 13</p>
+
+    <br>
+
+    <p><b>7. Below is declared and initialized an array:</b></p>
+    <p><b>var arr = array(11, 22, 33)</b></p>
+    <p><b>Write a command to add 9 as the last value of the array!</b></p>
+    <p>Answer:</p>
+    <p>arr.push(9);</p>
+
+    <br>
+
+    <p><b>8. What is a function? Write a function with a parameter and return statement, then call it!</b></p>
+    <p>A function is a block of code designed to perform a particular task.</p>
+    <p>To call a function, we simply type the name of the function, including the parantheses, and parameters when specified.</p>
+    <p>Example:</p>
+    <p>function addition(x,y) {</p>
+        <p>&emsp;var result = x + y;</p>
+        <p>&emsp;return result;</p>
+    <p>}</p>
+    <p>addition(3,9);</p>
+
+    <h1>Project 2 - Palindrome Checker</h1>
+    <p>Check the other file.</p>
+
+    <script>
+        // 1. Function 1
+        function displayInfo() {
+            console.log("Function 1: Hi, you found me. I am the info you're looking for.");
+        }
+
+        displayInfo();
+
+        // 2. Function 1_Review with Trigger
+        function showAlert() {
+            alert("You clicked me! Yay!");
+        }
+
+        // 3. Function 1_Task
+        function kimiNoNaWa() {
+            var na = prompt("Kimi no na wa?");
+            document.getElementById("kimiNoNaWa").innerHTML = na;
+
+            var despacito = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pQExPY1BbBk?si=z6SSoF9h3wzADkOX\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";
+
+            if (na == "suki da") {
+                document.getElementById("bonus").innerHTML = "Bakaaa you were supposed to write your name, not confess! Alexa play despacito <br><br>";
+                document.getElementById("despacito").innerHTML = despacito;
+                document.getElementById("notdespacito").innerHTML = "Alexa this isn't despacito";
+            }
+        }
+
+        // 4. Function 2
+        function addition(x,y) {
+            x = parseInt(x);
+            y = parseInt(y);
+
+            result = x + y;
+
+            console.log("Function 2: " + x + " + " + y + " = " + result);
+        }
+
+        addition(3,9);
+        addition(12,22);
+        addition(27,1);
+        addition(2200, 22);
+
+        // 5. Function 2_Task
+        // I put the prompt into the function because I don't want to clutter the prompt.
+        
+        function createStars() {
+            var input_star = prompt("How many stars do you want to print?");
+            for(var i=0; i<input_star; i++) {
+                document.getElementById("printedStars").innerHTML = document.getElementById("printedStars").innerHTML + "*";
+            }
+        }
+
+        // 6. Function 3
+        function isEven() {
+            var input_number = prompt("Input a number.");
+
+            if(input_number % 2 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function theActualFunc() {
+            if (isEven()) {
+                document.getElementById("deeznums").innerHTML = "even.";
+            } else {
+                document.getElementById("deeznums").innerHTML = "odd.";
+            }
+        }
+        
+        // 7. Function 3_Task
+
+        function countMultiplicative() {
+            var input_number = prompt("Input a number.");
+            var array = [];
+
+            for (var i=1; i<=9; i++) {
+                array.push(input_number * i);
+            }
+
+            document.getElementById("multiplicative").innerHTML = array;
+        }
+
+        // You're supposed to put this outside of the function, but fk it.
+        // document.getElementById("multiplicative").innerHTML = countMultiplicative(function3tasknum);
+
+        // 8. Project 1 - Username and Password Checker
+        // in another file.
+
+        // 9. Pop Quiz
+        // there is a pdf file, but let's not copy that here.
+
+        // 10. Project 2 - Palindrome Checker
+        // in another file.
+
+    </script>
+</body>
+</html>

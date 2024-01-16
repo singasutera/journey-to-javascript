@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <p>Hi, let's check if a word is a palindrome or not.</p>
+    <p>Palindrome is a word that reads the same backwards as it does forwards.</p>
+    <p>Let's take a look!</p>
+    <span><input type="text" id="word"> <button onclick="palindromeChecker()">Click me to check!</button></span>
+    <h3 id="result"></h3>
+
+    <script>
+        function isPalindrome(word) {
+
+            // ARRAY METHOD
+            /*
+                word = word.toLowerCase();
+
+                // convert the word into an array
+                var wordArray = word.split("");
+
+                // reverse the array
+                var reversedWordArray = wordArray.reverse();
+
+                // convert the reversed array into a string
+                var reversedWord = reversedWordArray.join("");
+
+                // check if the word is a palindrome
+                if (word === reversedWord) {
+                    return true;
+                } else {
+                    return false;
+                }
+            */
+
+            // LOOPING METHOD
+            var reversedWord = "";
+            
+            word = word.toLowerCase();
+
+            for (var i = word.length - 1; i >= 0; i--) {
+                reversedWord += word[i];
+            }
+
+            if (word === reversedWord) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function palindromeChecker() {
+            var word = document.getElementById("word").value;
+
+            if (isPalindrome(word)) {
+                document.getElementById("result").innerHTML = "Yes, \"" + word + "\" is a palindrome!";
+            } else {
+                document.getElementById("result").innerHTML = "No, \"" + word + "\" is not a palindrome!";
+            }
+        }
+
+    </script>
+</body>
+</html>
