@@ -1,0 +1,10 @@
+FAQ
+Q: Is it possible to have multiple data types inside an array?
+A: YES! You can have numbers and text inside the data types.
+
+NOTES
+Don't forget:
+- Live server extension.
+- Teach the students how to make folders and files inside the corresponding folders.
+- ! is Emmett Abbreviation. Try to find documentations about this.
+
