@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Types Counter</title>
+</head>
+<body>
+    <h2>Welcome to the Pokémon Types Counter project!</h2>
+    <p>Here, you will be able to count the amount of Pokémon types and display it.</p>
+
+    <h3>Below you'll find a list of Pokémons, but only their types is displayed:</h3>
+    <p style="font-size: 22px;" id="Pokémon"></p>
+
+    <h3>Below is the number of Pokémons depending on their types:</h3>
+    <p style="font-size: 22px;" id="count"></h3>
+
+    <script type="text/javascript">
+        var Pokémons = [];
+        var numberofFireTypes = 0;
+        var numberofWaterTypes = 0;
+        var numberofGhostTypes = 0;
+        var numberofPsychicTypes = 0;
+        
+        var text = "";git 
+        // * adalah range dan + 1 karena dari 0.
+        var randomizer = Math.floor(Math.random() * 22 + 1);
+        var PokémonTypeCode = 0;
+
+        for (var i = 0; i < randomizer; i++) {
+            PokémonTypeCode = Math.floor(Math.random() * 4 + 1);
+
+            if (PokémonTypeCode == 1) {
+                Pokémons.push("Fire Type");
+                numberofFireTypes++;
+            } else if (PokémonTypeCode == 2) {
+                Pokémons.push("Water Type");
+                numberofWaterTypes++;
+            } else if (PokémonTypeCode == 3) {
+                Pokémons.push("Ghost Type");
+                numberofGhostTypes++;
+            } else {
+                Pokémons.push("Psychic Type");
+                numberofPsychicTypes++;
+            }
+        }
+
+        for (var i = 0; i < Pokémons.length; i++) {
+            // text = text + (i+1) + ". " + Pokémons[i] + "<br>";
+            text = text + "- " + Pokémons[i] + "<br>";
+        }
+
+        document.getElementById("Pokémon").innerHTML = text;
+        document.getElementById("count").innerHTML = "Number of Fire Type Pokémons: " + numberofFireTypes + "<br>" + "Number of Water Type Pokémons: " + numberofWaterTypes + "<br>" + "Number of Ghost Type Pokémons: " + numberofGhostTypes + "<br>" + "Number of Psychic Type Pokémons: " + numberofPsychicTypes + "<br><br>";
+        document.write("And there are currently " + Pokémons.length + " Pokémons in the wild.");
+    </script>
+</body>
+</html>

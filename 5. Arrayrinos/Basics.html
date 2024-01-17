@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kapan kelar anying</title>
+    <title>Kapan kelar bosennnn</title>
 </head>
 <body>
     <!-- 1. Introduction to arrays -->
@@ -34,6 +34,20 @@
         cards.shift();
         document.write(cards);
         document.write("<br><br>");
+        // 2.4 Add items to the beginning of an array
+        cards.unshift("The Fool");
+        document.write(cards);
+        document.write("<br><br>");
+        // 2.5 Remove specific amount of items from a specific position
+        // cards.splice(startposition, numberofitems)
+        cards.splice(1, 1);
+        document.write(cards);
+        document.write("<br><br>");
+        // 2.6 Add items to a specific position
+        // cards.splice(startposition, numberofitemstodelete(0), item1, item2, item3)
+        cards.splice(1, 0, "The Magician");
+        document.write(cards);
+        document.write("<br><br>");
 
         // 3. Using Length and Sort
         document.write("Here is our current deck.");
@@ -42,6 +56,8 @@
         document.write("<br><br>");
         // 3.1 Using length
         document.write("There are " + cards.length + " cards in the deck.");
+        document.write("<br><br>");
+        document.write("The last card in our deck is " + cards[cards.length-1] + ".");
         document.write("<br><br>");
         // 3.2 Using sort
         cards.sort();
